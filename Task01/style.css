@@ -1,0 +1,76 @@
+/* importing google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+
+/* applying style to whole html */
+*{
+    /* include padding/,argin in actual width and hieght  */
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    /* flex makes it horizontally in row */
+    display: flex;
+    /* column is 1 hence one item covers whole space */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden ;
+    margin: 0;
+}
+
+.container{
+    /* flex makes it horizontally in row */
+    display: flex;
+    width: 90vw;
+}
+
+.panel{
+    background-size: cover 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color: white;
+    cursor: pointer;
+    /* size of flex item (panel) */
+    flex: 0.5; 
+    /* margin between items */
+    margin: 10px;
+    position: relative;
+    /* transition when we hover the active class along with expanding*/
+    transition: flex 0.7s ease-in;
+}
+
+.panel h3{
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    /* when card is not active */
+    opacity: 0;
+}
+
+.panel.active{
+    flex: 5;
+}
+
+.panel.active h3{
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+/* media query for under 480pixels that has its style*/
+@media(max-width: 480px){
+    .container{
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5){
+        display: none;
+    }
+}
+
