@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="hero is-primary is-bold">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">
+            Konsi Movie
+            <span class="icon">
+              <i class="fa-duotone fa-camera-movie"></i>
+            </span>
+          </h1>
+        </div>
+      </div>
+    </section>
+    <div class="container">
+      <div class="columns">
+        <div class="column">
+          <div id="left-autocomplete"></div>
+          <div class="left-summary"></div>
+        </div>
+        <div class="column">
+          <div id="right-autocomplete"></div>
+          <div class="right-summary"></div>
+        </div>
+      </div>
+      <div class="is-full notification is-primary tutorial">
+        <h1 class="title">
+          Use both textboxes to compare movies on <b>Konse Movie</b>
+        </h1>
+        <p class="subtitle">Find the best movie comparisons</p>
+      </div>
+      <div id="summary"></div>
+    </div>
+    <script src="utilities.js"></script>
+    <script src="autoCompleteWidget.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

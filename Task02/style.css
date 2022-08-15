@@ -1,0 +1,35 @@
+/* importing google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+/* applying style to whole html */
+*{
+    /* include padding/,argin in actual width and hieght  */
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f6f7fb;
+    font-family: 'Muli', sans-serif;
+    /* flex makes it horizontally in row */
+    display: flex;
+    /* column is 1 hence one item covers whole space */
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden ;
+    margin: 0;
+}
+
+.container{
+    text-align:center; 
+}
+
+.progress-container{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 30px;
+    max-width: 100%;
+    width: 350px;
+}
+
